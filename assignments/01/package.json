@@ -1,0 +1,14 @@
+{
+  "name": "advanced-javascript",
+  "version": "0.0.1",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "http-server": "^0.11.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "scripts": {
+    "start": "http-server -c1"
+  }
+}
