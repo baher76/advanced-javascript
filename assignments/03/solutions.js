@@ -66,7 +66,7 @@ function answer4() {
         <div>
           <input  onChange={this.changeText.bind(this)}/>
           <p >
-            The user typed `{this.state.userInput}`
+            The user typed {this.state.userInput}
           </p>
         </div>
       );
@@ -96,15 +96,15 @@ function answer5() {
       setInterval(counter, 1000);
     }
     render() {
-      var dots = '...';
-      if(this.state.count%3 === 3){
+      var dots = '';
+      if(this.state.count% 3 === 0){
         return dots ='...';
       }
-      if (this.state.count%3 === 2){ 
+      else if (this.state.count%2 === 0){ 
         return dots ='..';
       }
-      
-      if (this.state.count%3 === 1){ 
+      else {
+      //if  (this.state.count% === 1){ 
         return dots ='.';
       }
 /*    var threeDots = '...';
@@ -127,11 +127,13 @@ function answer6() {
     return a * (b - c);
   }*/
   
-  (a, b, c) => {
+  var convertMeToArrowSyntax= (a, b, c) => a * (b - c);
+  
+  /*(a, b, c) => {
     return a * (b - c);
   }
-  return (3, 7, 5);
-  //return convertMeToArrowSyntax(3, 7, 5);
+  return (3, 7, 5);*/
+  return convertMeToArrowSyntax(3, 7, 5);
 }
 /* --------------------7------------------------------- */
 
@@ -161,7 +163,7 @@ function answer8() {
       return this.x + this.y;
     }
   };
-
+var answerQ8 = myObject.addXtoY.bind(myObject); // add this code 
   function Component(props) {
     return (
       <div>
@@ -169,8 +171,8 @@ function answer8() {
       </div>
     );
   }
-    console.log(addXtoY);
+    //console.log(addXtoY); // delete cosole log it makes problem
     return (
-      <Component callback={myObject.addXtoY}/>
+      <Component callback={answerQ8}/>
   );
 }
